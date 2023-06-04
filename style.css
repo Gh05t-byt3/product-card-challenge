@@ -1,0 +1,130 @@
+:root {
+    --background1: hsl(30, 38%, 92%);
+    --button-color: hsl(158, 36%, 37%);
+    --h1-color: hsl(212, 21%, 14%);
+    --p-color: hsl(228, 12%, 48%);
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background1);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    font-family: Montserrat, sans-serif;
+
+}
+
+.perfume-wrapper {
+    width: 550px;
+    height: 400px;
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.perfume-wrapper img {
+    border-radius: 10px 0 0 10px;
+    width: 50%;
+}
+
+.product-label {
+    width: 50%;
+    padding: 25px;
+}
+.product-label h6 {
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: var(--p-color);
+    opacity: 66%;
+}
+
+.product-label h1 {
+    font-family: Fraunces;
+    font-weight: 700;
+    color: var(--h1-color);
+    line-height: 35px;
+    margin: 15px 0;
+}
+
+.product-label .texts {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--p-color);
+}
+
+.prices {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prices span {
+    font-size: 40px;
+    font-family: Fraunces;
+    color: var(--button-color);
+}
+
+.prices small {
+    color: var(--p-color);
+    opacity: 66%;
+}
+.prices small::after {
+    content: "";
+    border: 1px solid var(--h1-color);
+    position: absolute;
+    width: 45px;
+    transform: translate(-45px, 8px);
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--button-color);
+    color: white;
+    font-size: 18px;
+    font-family: Montserrat;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: .5s;
+    cursor: pointer;
+}
+button:hover {
+    transform: translateY(-5px);
+}
+
+
+
+@media (max-width: 375px) {
+    .perfume-wrapper {
+        width: 90vw;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .perfume-wrapper img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 215px;
+        object-fit: cover;
+    }
+
+    .product-label {
+        width: 100%;
+        padding: 25px;
+    }
+}
